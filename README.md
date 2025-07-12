@@ -1,61 +1,36 @@
+# PhishGuard - Fake URL Checker
 
-# PhishGuard 🛡️
+PhishGuard is a simple but powerful web app that helps users detect potentially harmful or fake URLs using the VirusTotal API. This tool is designed to improve digital safety and raise awareness of phishing threats.
 
-A JavaScript web app that helps users identify fake or suspicious URLs using client-side validation and the VirusTotal API.
+## 🔍 Features
+- VirusTotal API integration for real-time phishing URL checks
+- Node.js backend with Express
+- Simple frontend interface
+- Mobile-friendly design
+- Ready for deployment on Render
 
-## Features
-
-- Real-time phishing detection
-- Client-side URL validation
-- VirusTotal API integration
-- Modern responsive UI
-- Secure Node.js backend
-
-## Stack
-
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js, Express.js
-- **External API:** VirusTotal
-
-## How It Works
-
-1. User enters a URL
-2. Client performs immediate validation checks
-3. Backend submits URL to VirusTotal (if API key configured)
-4. Results are displayed with threat analysis
-
-## Setup
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Configure VirusTotal API key in `server/.env`:
+## 🚀 How to Deploy
+1. Clone or download the repo.
+2. Add your VirusTotal API key in `server/.env`:
    ```
    VIRUSTOTAL_API_KEY=your_api_key_here
    ```
-
-3. Start the server:
-   ```bash
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Start the server:
+   ```
    npm start
    ```
-
-## Client-Side Validation
-
-The app performs several security checks:
-
-- Protocol validation (http/https)
-- IP address detection
-- Suspicious character detection
-- Phishing keyword detection
-- Subdomain spoofing detection
-- URL shortener detection
-
-## Deployment
-
-Deploy on Replit by clicking the Run button. The app will be available on your Repl's URL.
+5. Open `index.html` in your browser.
 
 ---
 
-**Author:** Built with ❤️ on Replit by Emmanuel Obele Ngeyai as a learning project in cybersecurity and AI.
+## 👨‍💻 About the Developer
+
+**Emmanuel Obele Ngeyai** is a passionate self-taught developer with a strong interest in **Cybersecurity** and **Artificial Intelligence**. Driven by curiosity and resilience, Emmanuel built the PhishGuard Fake URL Checker app entirely using a **mobile device** — demonstrating that innovation and impact are not limited by resources.
+
+He is committed to leveraging technology to make the internet **safer, smarter, and more secure** for everyone.
+
+📩 **Contact email:** ngeyaiemmanuel@gmail.com
