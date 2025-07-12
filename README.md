@@ -1,33 +1,61 @@
+
 # PhishGuard 🛡️
 
-A fake URL checker app using client-side and VirusTotal API to detect malicious or suspicious websites.
+A JavaScript web app that helps users identify fake or suspicious URLs using client-side validation and the VirusTotal API.
 
 ## Features
-- VirusTotal integration
-- Node.js + Express backend
-- Clean UI (mobile-first)
-- Real-time URL analysis
 
-## How to Run
+- Real-time phishing detection
+- Client-side URL validation
+- VirusTotal API integration
+- Modern responsive UI
+- Secure Node.js backend
 
-1. Clone the repo
-2. `cd server`
-3. `npm install`
-4. Add `.env` file:
-5. Run: `npm start`
-6. Visit: `http://localhost:5000`
+## Stack
 
-## Author
-**Emmanuel Obele Ngeyai**  
-Help users identify if a URL might be fake, suspicious, or a phishing attempt by analyzing key red flags in the URL structure.
-🚀 What It Will Do:
-1. Accept a URL as input
-2. Analyze the URL for common red flags:
-Is it using an IP address instead of a domain?
-Does it contain "@" or other unusual characters?
-Is it trying to mimic popular websites? (e.g. gooogle.com)
-3. Display a warning message if suspicious
-👨‍💻 About the Developer
-Emmanuel Obele Ngeyai is a passionate self-taught developer with a strong interest in Cybersecurity and Artificial Intelligence. Driven by curiosity and resilience, Emmanuel built the PhishGuard Fake URL Checker app entirely using a mobile device, demonstrating that innovation and impact are not limited by resources. He is committed to leveraging technology to make the internet safer, smarter, and more secure for everyone.
-Contact email: ngeyaiemmanuel@gmail.com
- 🇳🇬 Nigeria
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **External API:** VirusTotal
+
+## How It Works
+
+1. User enters a URL
+2. Client performs immediate validation checks
+3. Backend submits URL to VirusTotal (if API key configured)
+4. Results are displayed with threat analysis
+
+## Setup
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Configure VirusTotal API key in `server/.env`:
+   ```
+   VIRUSTOTAL_API_KEY=your_api_key_here
+   ```
+
+3. Start the server:
+   ```bash
+   npm start
+   ```
+
+## Client-Side Validation
+
+The app performs several security checks:
+
+- Protocol validation (http/https)
+- IP address detection
+- Suspicious character detection
+- Phishing keyword detection
+- Subdomain spoofing detection
+- URL shortener detection
+
+## Deployment
+
+Deploy on Replit by clicking the Run button. The app will be available on your Repl's URL.
+
+---
+
+**Author:** Built with ❤️ on Replit by Emmanuel Obele Ngeyai as a learning project in cybersecurity and AI.

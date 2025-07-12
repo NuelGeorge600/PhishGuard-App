@@ -1,0 +1,29 @@
+entrypoint = "index.html"
+modules = ["nodejs-20", "web"]
+
+[nix]
+channel = "stable-24_11"
+
+[deployment]
+run = ["node", "server/index.js"]
+deploymentTarget = "cloudrun"
+
+[workflows]
+runButton = "Start PhishGuard Server"
+
+[[workflows.workflow]]
+name = "Start PhishGuard Server"
+author = 21132749
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd server && node index.js"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
